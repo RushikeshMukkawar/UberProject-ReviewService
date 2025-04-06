@@ -19,7 +19,7 @@ public class ReviewService implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         System.out.println("************************************");
-        Review r = Review.builder().content("XYZ").createdAt(new Date()).updatedAt(new Date()).rating(5.0).build();
+        Review r = Review.builder().content("XYZ").rating(5.0).build();
         Review r2 = Review.builder().content("XYZ").rating(5.0).build();
         reviewRepository.save(r);
         reviewRepository.save(r2);
